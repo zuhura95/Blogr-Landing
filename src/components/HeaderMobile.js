@@ -5,15 +5,16 @@ import {IoIosArrowDown} from 'react-icons/io'
 import logo from '../images/logo.svg'
 
 const HeaderMobile = () => {
-   
-    const showNav = () =>{
-        const menuBtn = document.querySelector('.hamburger-menu')
-        const navBar = document.querySelector('menu-mobile')
 
-        menuBtn.addEventListener('click', ()=>{
+    const showNav = () =>{
+      
+
+        document.querySelector('.hamburger-menu').addEventListener('click', ()=>{
         
-            navBar.classList.toggle('open')
-            // menuBtn.classList.toggle('rotate')
+            document.querySelector('.menu-mobile').classList.toggle('open')
+            document.querySelector('.hamburger-bars').classList.toggle('close')
+            document.querySelector('.hamburger-cross').classList.toggle('open')
+
         
         })
     }
@@ -25,8 +26,9 @@ const HeaderMobile = () => {
             <div className="flex">
                <img src={logo} alt="Blogr"/>
 
-                <div className="hamburger-menu" onClick={()=> showNav()}>
-                   <img src={hamburger} alt=""/>
+                <div className="hamburger-menu" onClick ={()=> showNav()}>
+                   <img className="hamburger-bars" src={hamburger} alt=""/>
+                   <img className="hamburger-cross" src={close} alt=""/>
                </div>
               
 

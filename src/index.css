@@ -407,6 +407,19 @@ footer ul li a:hover{
     cursor: pointer;
   }
 
+  .hamburger-menu .hamburger-cross{
+    display: none;
+  }
+  .hamburger-menu .hamburger-bars.close{
+    display: none;
+  }
+
+  .hamburger-menu .hamburger-cross.open{
+    display: flex;
+  }
+
+  
+
   
 
   nav, nav .nav-buttons{
@@ -446,8 +459,12 @@ footer ul li a:hover{
   flex-direction: column;
   padding: 20px 0;
   box-shadow: 10px 8px 20px 0px rgba(0,0,0,0.2);
-  /* display: none; */
+ display: none ;
 
+  }
+
+  .menu-mobile.open{
+    display: flex;
   }
 
  .menu-mobile ul{
